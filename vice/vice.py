@@ -20,7 +20,7 @@
 """
 
 from pygments.style import Style
-from pygments.token import Token, Comment, Number, Keyword, Name, String, Operator, Generic
+from pygments.token import Token, Comment, Number, Keyword, Name, String, Operator, Generic, Punctuation
 
 colors = {
     'white':          '#ffffff',
@@ -63,7 +63,7 @@ class ViceStyle(Style):
         Name.Constant:      to_color(style='noinherit', fg='mint'),
         Number.Float:       to_color(style='noinherit', fg='lavender'),
         Name.Function:      to_color(style='noinherit', fg='pink'),
-        Name.Class:         to_color(style='noinherit bold', fg='pink'),
+        Name.Class:         to_color(style='noinherit', fg='pink'),
         Name.Attribute:     to_color(style='noinherit', fg='pink'),
         Name.Variable:      to_color(style='noinherit', fg='pink'),
         Name.Label:         to_color(style='noinherit', fg='teal'),
@@ -79,5 +79,6 @@ class ViceStyle(Style):
         Generic.Heading:    to_color(style='noinherit', fg='white'),
         Generic.Subheading: to_color(style='noinherit', fg='white'),
         Keyword.Type:       to_color(style='noinherit', fg='mint'),
-        Generic.Emph:       to_color(style='underline')
+        Generic.Emph:       to_color(style='underline'),
+        Name.Builtin.Pseudo: to_color(style='noinherit', fg='dark_mint')
     }
