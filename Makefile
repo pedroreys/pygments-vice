@@ -1,8 +1,10 @@
 all: clean build clean
 
 build:
-	python setup.py sdist
-	python setup.py bdist bdist_egg bdist_wheel
+	python setup.py sdist bdist_egg bdist_wheel
+
+test-deploy: clean build
+	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 deploy: clean build
 	twine upload dist/*
