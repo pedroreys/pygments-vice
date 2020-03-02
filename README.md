@@ -18,4 +18,4 @@ After installed, you will have a new style available to use with pygments called
 
 
 [logo]: http://i.imgur.com/HWvyN7M.png "vice"
-[screencap]: https://i.imgur.com/x85Rjj0.png "vice"
+[screencap]: https://i.imgur.com/jt6TthK.png "vice"
