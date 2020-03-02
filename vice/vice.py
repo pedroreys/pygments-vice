@@ -53,7 +53,7 @@ def to_color(style=None, fg=None, bg=None):
 
 class ViceStyle(Style):
     default_styles = ''
-    background_color = None
+    background_color = '#000000'
     styles = {
         Token:              to_color(style='noinherit', fg='white'),
         Generic.Inserted:   to_color(style='noinherit', fg='white', bg='dark_mint'),
