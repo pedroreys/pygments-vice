@@ -3,8 +3,9 @@ all: clean build clean
 build:
 	python setup.py sdist
 	python setup.py bdist bdist_egg bdist_wheel
-	twine upload --config-file ~/.pypirc dist/*
-	@make clean
+
+deploy: clean build
+	twine upload dist/*
 
 install: build
 	python setup.py install
