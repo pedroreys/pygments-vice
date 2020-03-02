@@ -12,6 +12,12 @@ from setuptools import setup, find_packages
 
 from vice import __version__
 
+# read the contents of your README file
+from os import path
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
     name='pygments-vice',
     version = __version__,
@@ -20,6 +26,8 @@ setup(
     author='Pedro Reys',
     author_email='pedro@pedroreys.com',
     description='pygments-vice is a pygments style that is a port of the vim-vice colorscheme',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     keywords='syntax highlighting pygments style',
     packages=find_packages(),
     install_requires=['pygments >= 2.0'],
